@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>796,2053.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>840,2304</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Login_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -179,29 +179,11 @@
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence sap:VirtualizedContainerService.HintSize="336,290.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_10">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="314,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="Красаучег!" TopMost="True" />
-                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'UiPath.Studio.exe UiPath'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-                      <ui:Click.CursorPosition>
-                        <ui:CursorPosition Position="Center">
-                          <ui:CursorPosition.OffsetX>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetX>
-                          <ui:CursorPosition.OffsetY>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetY>
-                        </ui:CursorPosition>
-                      </ui:Click.CursorPosition>
-                      <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="200b1c37bf9ffe39649c1e0c55a8e64f" Selector="&lt;wnd app='uipath.studio.exe' cls='HwndWrapper*' title='UiPath Studio - UiPath_REFrameWork' /&gt;" WaitForReady="INTERACTIVE" />
-                      </ui:Click.Target>
-                    </ui:Click>
-                  </Sequence>
+                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke System1_Close workflow" sap:VirtualizedContainerService.HintSize="314,86.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="System1\System1_Close.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
                 </If.Else>
               </If>
             </Sequence>
