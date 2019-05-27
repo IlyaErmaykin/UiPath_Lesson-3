@@ -325,12 +325,9 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.Condition>[SystemError IsNot Nothing]</Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read Config, Init Applications" DisplayName="Init" sap:VirtualizedContainerService.HintSize="484.666666666667,2588" sap2010:WorkflowViewState.IdRef="State_2">
+                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read Config, Init Applications" DisplayName="Init" sap:VirtualizedContainerService.HintSize="484.666666666667,2506" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
-                        <Sequence sap:VirtualizedContainerService.HintSize="458,2160.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_24">
-                          <Sequence.Variables>
-                            <Variable x:TypeArguments="sd:DataRow" Name="WiList" />
-                          </Sequence.Variables>
+                        <Sequence sap:VirtualizedContainerService.HintSize="458,2078.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_24">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -459,7 +456,7 @@
                               <scg:Dictionary x:TypeArguments="x:String, Argument" />
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
-                          <Sequence DisplayName="Read input transaction data table sequence" sap:VirtualizedContainerService.HintSize="436,1048.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                          <Sequence DisplayName="Read input transaction data table sequence" sap:VirtualizedContainerService.HintSize="436,1052" sap2010:WorkflowViewState.IdRef="Sequence_23">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -498,29 +495,28 @@
                                 </ActivityAction>
                               </ui:ExcelApplicationScope.Body>
                             </ui:ExcelApplicationScope>
-                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="414,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[DataTableResult]" TopMost="True" />
                             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke System1_Close workflow" sap:VirtualizedContainerService.HintSize="414,86.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="System1\System1_Close.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
                                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
                               </ui:InvokeWorkflowFile.Arguments>
                             </ui:InvokeWorkflowFile>
+                            <Assign sap:VirtualizedContainerService.HintSize="414,62" sap2010:WorkflowViewState.IdRef="Assign_20">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="sd:DataRow[]">[WiList]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="sd:DataRow[]">[DataTableResult.Select("Type='WI5' AND Status='Open'")]</InArgument>
+                              </Assign.Value>
+                            </Assign>
                           </Sequence>
-                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,264.666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,179.333333333333" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                             <ui:CommentOut.Body>
-                              <Sequence DisplayName="Игнорируемые действия" sap:VirtualizedContainerService.HintSize="264,186" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                              <Sequence DisplayName="Игнорируемые действия" sap:VirtualizedContainerService.HintSize="200,100.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_25">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Assign sap:VirtualizedContainerService.HintSize="242,62" sap2010:WorkflowViewState.IdRef="Assign_20">
-                                  <Assign.To>
-                                    <OutArgument x:TypeArguments="sd:DataRow">[WiList]</OutArgument>
-                                  </Assign.To>
-                                  <Assign.Value>
-                                    <InArgument x:TypeArguments="sd:DataRow">[DataTableResult.Select("Type='WI5' AND Status='Open'")]</InArgument>
-                                  </Assign.Value>
-                                </Assign>
                               </Sequence>
                             </ui:CommentOut.Body>
                           </ui:CommentOut>
@@ -706,6 +702,7 @@
       <Variable x:TypeArguments="x:String" Name="TransactionField1" />
       <Variable x:TypeArguments="x:String" Name="TransactionID" />
       <Variable x:TypeArguments="sd:DataTable" Name="TransactionData" />
+      <Variable x:TypeArguments="sd:DataRow[]" Name="WiList" />
     </StateMachine.Variables>
   </StateMachine>
 </Activity>
