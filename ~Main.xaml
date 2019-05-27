@@ -325,9 +325,9 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.Condition>[SystemError IsNot Nothing]</Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read Config, Init Applications" DisplayName="Init" sap:VirtualizedContainerService.HintSize="484.666666666667,2588" sap2010:WorkflowViewState.IdRef="State_2">
+                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read Config, Init Applications" DisplayName="Init" sap:VirtualizedContainerService.HintSize="484.666666666667,2489.33333333333" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
-                        <Sequence sap:VirtualizedContainerService.HintSize="458,2160.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                        <Sequence sap:VirtualizedContainerService.HintSize="458,2062" sap2010:WorkflowViewState.IdRef="Sequence_24">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="sd:DataRow" Name="WiList" />
                           </Sequence.Variables>
@@ -459,7 +459,7 @@
                               <scg:Dictionary x:TypeArguments="x:String, Argument" />
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
-                          <Sequence DisplayName="Read input transaction data table sequence" sap:VirtualizedContainerService.HintSize="436,1048.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                          <Sequence DisplayName="Read input transaction data table sequence" sap:VirtualizedContainerService.HintSize="436,950" sap2010:WorkflowViewState.IdRef="Sequence_23">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -498,7 +498,6 @@
                                 </ActivityAction>
                               </ui:ExcelApplicationScope.Body>
                             </ui:ExcelApplicationScope>
-                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="414,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[DataTableResult]" TopMost="True" />
                             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke System1_Close workflow" sap:VirtualizedContainerService.HintSize="414,86.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="System1\System1_Close.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
                                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
