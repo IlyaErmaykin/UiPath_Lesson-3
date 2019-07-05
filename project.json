@@ -3,10 +3,10 @@
   "description": "UiPath_REFrameWork Template",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.6.1]",
+    "UiPath.Excel.Activities": "[2.6.2]",
     "UiPath.Mail.Activities": "[1.5.0]",
-    "UiPath.System.Activities": "[19.4.0]",
-    "UiPath.UIAutomation.Activities": "[19.5.0]"
+    "UiPath.System.Activities": "[19.6.0]",
+    "UiPath.UIAutomation.Activities": "[19.6.0]"
   },
   "schemaVersion": "3.2",
   "studioVersion": "17.1",
@@ -20,6 +20,7 @@
     ]
   },
   "projectType": "Workflow",
+  "expressionLanguage": "VisualBasic",
   "libraryOptions": {
     "includeOriginalXaml": false,
     "privateWorkflows": []
