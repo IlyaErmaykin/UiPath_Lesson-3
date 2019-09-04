@@ -3,27 +3,34 @@
   "description": "UiPath_REFrameWork Template",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.6.2]",
-    "UiPath.Mail.Activities": "[1.5.0]",
-    "UiPath.System.Activities": "[19.6.0]",
-    "UiPath.UIAutomation.Activities": "[19.6.0]"
+    "UiPath.Credentials.Activities": "[1.1.6479.13204]",
+    "UiPath.Excel.Activities": "[2.6.3]",
+    "UiPath.Mail.Activities": "[1.6.0]",
+    "UiPath.System.Activities": "[19.8.0]",
+    "UiPath.UIAutomation.Activities": "[19.8.0-ce]"
   },
-  "schemaVersion": "3.2",
-  "studioVersion": "17.1",
+  "webServices": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "19.8.0.0",
   "projectVersion": "1.0.0.0",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
     "excludedLoggedData": [
       "Private:*",
       "*password*"
-    ]
+    ],
+    "executionType": "Workflow"
   },
-  "projectType": "Workflow",
-  "expressionLanguage": "VisualBasic",
-  "libraryOptions": {
-    "includeOriginalXaml": false,
-    "privateWorkflows": []
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    }
   },
-  "webServices": []
+  "expressionLanguage": "VisualBasic"
 }
