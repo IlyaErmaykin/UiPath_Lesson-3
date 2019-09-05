@@ -70,7 +70,7 @@
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke System1_Login workflow" sap:VirtualizedContainerService.HintSize="376,86.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="System1\System1_Login.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_System1URL">[in_Config("System1 URL").ToString]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_System1Credential">[in_Config("System1_Credential").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_System1Credential">[in_Config("System1 Credential").ToString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SHA1Online_Login workflow" sap:VirtualizedContainerService.HintSize="376,86.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="SHA1Online\SHA1Online_Login.xaml">
