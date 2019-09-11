@@ -100,11 +100,21 @@
         "D:\\users\\IErmaykin\\.nuget\\packages\\uipath.vision/1.7.0\\lib/net452/UiPath.Vision.AbbyyFRECommon.dll",
         "D:\\users\\IErmaykin\\.nuget\\packages\\uipath.vision/1.7.0\\lib/net452/UiPath.Vision.AzureComputerVision.dll",
         "D:\\users\\IErmaykin\\.nuget\\packages\\uipath.vision/1.7.0\\lib/net452/UiPath.Vision.Core.dll",
-        "D:\\users\\IErmaykin\\.nuget\\packages\\uipath.vision/1.7.0\\lib/net452/UiPath.Vision.dll",
         "D:\\users\\IErmaykin\\.nuget\\packages\\uipath.vision/1.7.0\\lib/net452/UiPath.Vision.GoogleCloud.dll",
         "D:\\users\\IErmaykin\\.nuget\\packages\\uipath.vision/1.7.0\\lib/net452/UiPath.Vision.Microsoft.dll",
         "D:\\users\\IErmaykin\\.nuget\\packages\\uipath.vision/1.7.0\\lib/net452/UiPath.Vision.MicrosoftCloud.dll",
-        "D:\\users\\IErmaykin\\.nuget\\packages\\uipath.vision/1.7.0\\lib/net452/UiPath.Vision.Tesseract.dll"
+        "D:\\users\\IErmaykin\\.nuget\\packages\\uipath.vision/1.7.0\\lib/net452/UiPath.Vision.Tesseract.dll",
+        "D:\\users\\IErmaykin\\.nuget\\packages\\uipath.vision/1.7.0\\lib/net452/UiPath.Vision.dll"
+      ]
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Credentials.Activities",
+        "Version": "1.1.6479.13204"
+      },
+      "Assemblies": [
+        "D:\\users\\IErmaykin\\.nuget\\packages\\credentialmanagement/1.0.2\\lib/net35/CredentialManagement.dll",
+        "D:\\users\\IErmaykin\\.nuget\\packages\\uipath.credentials.activities/1.1.6479.13204\\lib/net40-client/UiPath.Credentials.Activities.dll"
       ]
     }
   ],
@@ -129,6 +139,11 @@
           "Item2": "[2.5.0, )"
         }
       ]
+    },
+    "CredentialManagement": {
+      "Id": "CredentialManagement",
+      "Version": "1.0.2",
+      "Dependencies": []
     },
     "CsvHelper": {
       "Id": "CsvHelper",
@@ -219,6 +234,16 @@
       "Id": "UiPath",
       "Version": "19.8.7173.31251-ce",
       "Dependencies": []
+    },
+    "UiPath.Credentials.Activities": {
+      "Id": "UiPath.Credentials.Activities",
+      "Version": "1.1.6479.13204",
+      "Dependencies": [
+        {
+          "Item1": "CredentialManagement",
+          "Item2": "[1.0.2, )"
+        }
+      ]
     },
     "UiPath.Excel.Activities": {
       "Id": "UiPath.Excel.Activities",
