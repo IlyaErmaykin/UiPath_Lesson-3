@@ -11,7 +11,7 @@
   <sap:VirtualizedContainerService.HintSize>996.666666666667,3426.66666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1_CreateYearlyReport_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="21">
+    <scg:List x:TypeArguments="x:String" Capacity="42">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -33,10 +33,11 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Excel</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="20">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -56,7 +57,8 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="System1_CreateYearlyReport" sap:VirtualizedContainerService.HintSize="976.666666666667,3326.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -292,7 +294,7 @@
                   </Assign>
                   <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Edit'" sap:VirtualizedContainerService.HintSize="434,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[ReportFilePath]">
                     <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="0c5bf27f880026e5ce635fdbe5654508" Selector="&lt;wnd app='iexplore.exe' cls='#32770' title='Сохранить как' /&gt;&lt;wnd aaname='Имя файла:' cls='Edit' /&gt;">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="0c5bf27f880026e5ce635fdbe5654508" Selector="&lt;wnd app='iexplore.exe' cls='#32770' title='Сохранение' /&gt;&lt;wnd aaname='Панель проводника' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Имя файла:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;">
                         <ui:Target.TimeoutMS>
                           <InArgument x:TypeArguments="x:Int32" />
                         </ui:Target.TimeoutMS>
@@ -346,7 +348,7 @@
                             </ui:CursorPosition>
                           </ui:Click.CursorPosition>
                           <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='ACME System 1 - Reports - Download Monthly Report - Internet Exp*' /&gt;&#xD;&#xA;&lt;wnd cls='Frame Notification Bar' /&gt;&#xD;&#xA;&lt;ctrl automationid='IENotificationBar' /&gt;&#xD;&#xA;&lt;ctrl name='Закрыть' role='push button' /&gt;&#xD;&#xA;">
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='ACME System 1 - Reports - Download Monthly Report - Internet Exp*' /&gt;&#xA;&lt;wnd cls='Frame Notification Bar' /&gt;&#xA;&lt;ctrl automationid='IENotificationBar' /&gt;&#xA;&lt;ctrl name='Закрыть' role='push button' /&gt;&#xA;">
                               <ui:Target.TimeoutMS>
                                 <InArgument x:TypeArguments="x:Int32" />
                               </ui:Target.TimeoutMS>
@@ -359,7 +361,7 @@
                       </Sequence>
                     </ui:OnUiElementAppear.Body>
                     <ui:OnUiElementAppear.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='ACME System 1 - Reports - Download Monthly Report - Internet Exp*' /&gt;&#xD;&#xA;&lt;wnd aaname='Уведомление' cls='DirectUIHWND' /&gt;&#xD;&#xA;&lt;ctrl automationid='IENotificationBar' /&gt;&#xD;&#xA;&lt;ctrl name='Текст панели уведомлений' role='text' text='Скачивание * завершено.' /&gt;">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='ACME System 1 - Reports - Download Monthly Report - Internet Exp*' /&gt;&#xA;&lt;wnd aaname='Уведомление' cls='DirectUIHWND' /&gt;&#xA;&lt;ctrl automationid='IENotificationBar' /&gt;&#xA;&lt;ctrl name='Текст панели уведомлений' role='text' text='Скачивание * завершено.' /&gt;">
                         <ui:Target.TimeoutMS>
                           <InArgument x:TypeArguments="x:Int32" />
                         </ui:Target.TimeoutMS>

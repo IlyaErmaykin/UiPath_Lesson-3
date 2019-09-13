@@ -1355,9 +1355,9 @@
     "restore": {
       "projectUniqueName": "UiPath_REFrameWork",
       "projectName": "UiPath_REFrameWork",
-      "projectPath": "D:\\Projects\\UiPath_Lesson-3\\.local",
+      "projectPath": "D:\\Projects\\UiPath_Lesson-3\\1st_part\\.local",
       "packagesPath": "D:\\users\\IErmaykin\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\UiPath_Lesson-3\\.local"
+      "outputPath": "D:\\Projects\\UiPath_Lesson-3\\1st_part\\.local"
     },
     "frameworks": {
       "net461": {
