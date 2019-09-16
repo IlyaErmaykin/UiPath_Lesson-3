@@ -1353,8 +1353,8 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "UiPath_REFrameWork",
-      "projectName": "UiPath_REFrameWork",
+      "projectUniqueName": "Lesson_3_2nd",
+      "projectName": "Lesson_3_2nd",
       "projectPath": "D:\\Projects\\UiPath_Lesson-3\\2nd_part\\.local",
       "packagesPath": "D:\\users\\IErmaykin\\.nuget\\packages\\",
       "outputPath": "D:\\Projects\\UiPath_Lesson-3\\2nd_part\\.local"
